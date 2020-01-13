@@ -1,7 +1,9 @@
 class ScoreboardsController < ApplicationController
 
 	def index
-		@scoreboard = Scoreboard.order(score: :desc)
+		@scoreboard = Scoreboard.order(score: :desc).limit(20)
+		# @scoreboard = Scoreboard.order(score: :desc)
+
 		render json: ScoreboardSerializer.new(@scoreboard).serialized_json, include: "**"
 	end
 
@@ -31,7 +33,7 @@ class ScoreboardsController < ApplicationController
 private
 
 	def create_scoreboard_params
-		params.permit(:player_id, :score, :player)
+		params.permit(:player_id, :score, :power_level, :player)
 	end
 
 end

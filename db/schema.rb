@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_01_12_202144) do
   create_table "scoreboards", force: :cascade do |t|
     t.integer "player_id"
     t.integer "score"
+    t.float "power_level", :precision => 5
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

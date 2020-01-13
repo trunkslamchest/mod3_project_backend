@@ -34,7 +34,7 @@ User.create(
 	zip_code: 69420
 )
 
-50.times {
+10.times {
 	User.create(
 		user_name: "user#{numbers.sample}",
 		password: "pw",
@@ -56,6 +56,12 @@ User.create(
 Player.destroy_all
 Scoreboard.destroy_all
 
-15.times{Player.create(name: Faker::Name.name)}
+# 15.times{Player.create(name: Faker::Name.name)}
 
-20.times{Scoreboard.create(player_id: Player.ids.sample, score: rand(1..200))}
+# 20.times{Scoreboard.create(player_id: Player.ids.sample, score: rand(1..200), power_level: rand(0.00001..2.50001).floor(5))}
+
+# def float_range
+# 	puts rand(1.00001..2.00001).floor(5)
+# end
+
+# float_range
