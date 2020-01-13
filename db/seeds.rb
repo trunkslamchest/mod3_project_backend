@@ -52,3 +52,10 @@ User.create(
 		zip_code: rand(10000..99999)
 	)
 }
+
+Player.destroy_all
+Scoreboard.destroy_all
+
+15.times{Player.create(name: Faker::Name.name)}
+
+20.times{Scoreboard.create(player_id: Player.ids.sample, score: rand(1..200))}
