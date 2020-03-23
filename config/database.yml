@@ -27,7 +27,7 @@ default: &default
 
 development:
   <<: *default
-  database: mod3_project_revamp_backend_development
+  database: mod3_project_revamp_v2_backend_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: mod3_project_revamp_backend_test
+  database: mod3_project_revamp_v2_backend_test
   username: postgres
   password: hockey
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: mod3_project_revamp_backend_production
-  username: mod3_project_revamp_backend
+  database: mod3_project_revamp_v2_backend_production
+  username: mod3_project_revamp_v2_backend
   password: <%= ENV['MOD3_PROJECT_REVAMP_BACKEND_DATABASE_PASSWORD'] %>

@@ -53,10 +53,10 @@ User.create(
 # 	)
 # }
 
-Player.destroy_all
+# Player.destroy_all
 Scoreboard.destroy_all
 
 # 25.times{Player.create(name: Faker::Internet.username)}
 
-# 20.times{Scoreboard.create(player_id: Player.ids.sample, score: rand(1..2), power_level: rand(0.00001..2.50001).floor(5))}
+20.times{Scoreboard.create(player: Faker::Internet.username, score: rand(1..2), power_level: rand(0.00001..2.50001).floor(5))}
 

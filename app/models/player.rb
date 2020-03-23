@@ -1,5 +1,5 @@
 class Player < ApplicationRecord
 
-	has_many :scoreboards, dependent: :destroy
+	# has_many :scoreboards, dependent: :destroy
 
 end

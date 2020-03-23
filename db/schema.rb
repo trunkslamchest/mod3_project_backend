@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2020_01_12_202144) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # create_table "players", force: :cascade do |t|
+  #   t.string "name"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
 
   create_table "scoreboards", force: :cascade do |t|
-    t.integer "player_id"
+    t.string "player"
     t.integer "score"
     t.float "power_level", :precision => 5
     t.datetime "created_at", null: false
